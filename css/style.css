@@ -120,13 +120,18 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
 .stylize-hr {
-  border: 1px solid #005200;
-  border-radius: 10px;
-  box-shadow: 0px 2px 8px 0 #005200, 0 6px 20px 0 black; }
+  margin: 25px 0;
+  height: 1px;
+  border: 0;
+  background: black;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, black)); }
 
 .stylize-hr-sub {
-  border: 1px dashed rgba(4, 143, 4, 0.507);
-  border-radius: 10px; }
+  margin: 25px 0;
+  height: 1px;
+  border: 0;
+  background: black;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, silver)); }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -179,11 +184,9 @@ body {
 .btn-text:link, .btn-text:visited {
   font-weight: 700;
   text-decoration: none;
-  padding: 0.5rem 5rem;
+  padding: 0.1rem 2rem;
   display: inline-block;
-  border-radius: 4.5rem;
   transition: all .3s;
-  box-shadow: 0 0.2rem 0.2rem black;
   position: relative;
   left: 50%;
   transform: translate(-50%, 0);
@@ -192,17 +195,7 @@ body {
   font-size: 1.25rem; }
 
 .btn-text:hover {
-  transform: translateY(-0.1rem) translateX(-50%);
-  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.5);
-  background-color: #dfffdf; }
-  .btn-text:hover::after {
-    transform: scaleX(1.4) scaleY(1.8) translate(-50%, 0);
-    opacity: 0; }
-
-.btn-text:active {
-  transform: translateY(-0.1rem) translate(-50%, 0); }
-  .btn-text:active::after {
-    background-color: rgba(223, 255, 223, 0.534); }
+  font-size: 1.35rem; }
 
 .btn-text::after {
   content: "";
