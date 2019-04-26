@@ -1,0 +1,41 @@
+.composition{
+    position: relative;
+
+
+    &__photo{
+
+        width: 14rem;
+        height: 14rem;
+        
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 5px;
+        position: relative;
+        
+        transform: scale(1);
+        transition-duration: 0.2s;
+        margin: 1rem;
+
+        &:hover{
+            transform: scale(1.4);
+            transition-duration: 0.3s;
+
+     z-index: 3;
+        }
+        &--p1{
+            top: 0%;
+            left: 0%;
+            
+        }
+
+        &--p2{
+            top: 0%;
+            left: 0%;
+        }
+
+        &--p3{
+            top: 0%;
+            left: 0%;
+        }
+
+    }
+}

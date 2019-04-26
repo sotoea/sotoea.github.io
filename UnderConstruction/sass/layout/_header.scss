@@ -1,0 +1,38 @@
+.header{
+    height: 55rem;
+    background-image: linear-gradient(to right bottom, 
+        $color-black, 
+        $color-dark-green-trans),
+        url("../img/banner.png");
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 50rem,0 52.5rem);
+    
+    &__logo-box{
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+    }
+
+    &__logo{
+        height: 3.5rem;
+    }
+
+    &__logo:hover{
+        .header__logo:hover{
+            animation-name: logoHover;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+    }
+
+    &__text-box{
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        text-align: center;
+    }
+}

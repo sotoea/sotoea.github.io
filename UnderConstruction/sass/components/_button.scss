@@ -1,0 +1,101 @@
+.btn{
+    &:link,
+    &:visited{
+        text-transform: uppercase;
+        
+        text-decoration: none;
+        margin-top: 1.5rem;
+        padding: 1rem 8rem;
+        display: inline-block;
+        border-radius: 4.5rem;
+        transition: all .3s;
+        box-shadow: 0 0.5rem 1rem $color-black;
+        position: relative;
+        color: $color-black;
+        background-color: $color-light-green-trans;
+
+    }
+    
+    &:hover{
+        transform: translateY(-0.3rem);
+        box-shadow: 0 1rem 1rem rgba(0,0,0,0.5);
+        background-color: $color-light-green;
+
+        &::after{
+            transform: scaleX(1.4) scaleY(1.8);
+        
+            opacity: 0;
+        }
+    }
+    
+    &:active{
+        transform: translateY(-0.1rem);
+    }
+    
+    &--white{
+        background-color: $color-light-green-trans;
+        
+
+        &::after{
+            background-color: $color-light-green-trans
+        }
+    }
+    
+    &::after{
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 0.3s;
+    }
+
+    &--animated{
+        animation-name: moveInBottom;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        animation-delay: 1.2s;
+        animation-fill-mode: backwards;
+    }
+}
+
+.btn-text{
+    &:link,
+    &:visited{
+        font-weight: 700;
+        text-decoration: none;
+
+        padding: 0.1rem 2rem;
+        display: inline-block;
+        
+        transition: all .3s;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        color: $color-black;
+        background-color: rgb(239, 255, 239);
+        font-size: 1.25rem;
+    }
+    
+    &:hover{
+        font-size: 1.35rem;
+
+    }
+        
+    &::after{
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 0.3s;
+    }
+}

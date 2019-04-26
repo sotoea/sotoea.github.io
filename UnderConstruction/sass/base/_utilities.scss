@@ -1,0 +1,55 @@
+.add-margin-top-25{
+    margin-top: 2.5rem;
+}
+
+.add-margin-top-100{
+    margin-top: 10rem;
+}
+
+.add-margin-top-50{
+    margin-top: 5rem;
+}
+
+.add-margin-bot-25{
+    margin-bottom: 2.5rem;
+}
+
+.add-margin-bot-100{
+    margin-bottom: 10rem;
+}
+
+.add-margin-bot-50{
+    margin-bottom: 5rem;
+}
+
+.justify-text{
+    text-align: justify;
+}
+
+.left-text{
+    text-align: left;
+}
+
+.add-background{
+    border-radius: 3px;
+    border: 2px solid rgb(177, 189, 180);
+    background-color: rgb(242, 255, 240);
+    padding: 2.5vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.stylize-hr{
+    margin: 25px 0;
+    height: 1px;
+    border: 0;
+    background: black;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, black));
+}
+
+.stylize-hr-sub{
+    margin: 25px 0;
+    height: 1px;
+    border: 0;
+    background: black;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, rgb(192, 192, 192)));
+}
