@@ -1,0 +1,1900 @@
+/* Reset original css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+
+
+
+/* All slides css */
+body{
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica;
+  background-color: #191919;
+  letter-spacing: 2px;
+  color: white;
+  line-height: 20px;
+	font-weight: 300;
+}
+
+/* .main-content {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+} */
+
+h1 {
+	font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+}
+
+p {
+	font-weight: 300;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.red {
+  color: red;
+}
+
+.container {
+  height: 50rem;
+  position: relative;
+}
+
+.gradient-background{
+  height: 20rem;
+	background-image: linear-gradient(106deg, #2f69f8, #45d4fb);
+  background-image: -webkit-linear-gradient(106deg, #2f69f8, #45d4fb);
+  background-image: -o-linear-gradient(106deg, #2f69f8, #45d4fb);
+}
+
+img {
+  object-fit: cover;
+}
+
+.myAudio {
+	display: none;
+}
+
+.play-audio {
+	position: absolute;
+  right: 2rem;
+  bottom: 5rem;
+  z-index: 2;
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+	background-color: transparent;
+  border: 0;
+}
+
+.play-audio:hover {
+	background-color: red;
+}
+
+.audio-button {
+	width: 5rem;
+  height: 5rem;
+}
+
+/* Preloader */
+.spinner-wrapper {
+	position: fixed;
+	z-index: 999999;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #2f2c3d;
+}
+
+.spinner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 3.75rem;
+	height: 1.25rem;
+	margin: -0.625rem 0 0 -1.875rem;
+	text-align: center;
+}
+
+.spinner > div {
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 100%;
+	background-color: #fff;
+	-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+	animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+	0%, 80%, 100% { -webkit-transform: scale(0); }
+	40% { -webkit-transform: scale(1.0); }
+}
+
+@keyframes sk-bouncedelay {
+	0%, 80%, 100% {
+		-webkit-transform: scale(0);
+		-ms-transform: scale(0);
+		transform: scale(0);
+	} 40% {
+		-webkit-transform: scale(1.0);
+		-ms-transform: scale(1.0);
+		transform: scale(1.0);
+	}
+}
+
+/* Front slide */
+.front .front-header {
+  display: flex;
+  justify-content: space-evenly;
+	position: relative;
+	top: 2rem;
+}
+
+.front .front-header .logo {
+  width: 12%;
+	position: absolute;
+	left: 6rem;
+	height: 4rem;
+}
+
+.front .front-header .header-text {
+  margin-top: 1rem;
+	position: absolute;
+	right: 6rem;
+	font-weight: bold;
+	font-size: 25px;
+	line-height: 1.34;
+}
+
+.left-sidebar {
+  display: flex;
+  position: absolute;
+  top: 10rem;
+  z-index: 2;
+  margin-left: 5%;
+  justify-content: space-evenly;
+  width: 10%;
+}
+
+.left-sidebar .left-slide-number {
+  border: 1px solid red;
+  background-color: #ffffff;
+  width: 2rem;
+  height: 2rem;
+}
+
+.left-sidebar .left-slide-number .slide-number {
+  padding-top: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+}
+
+.left-sidebar .slide-arrow-container {
+	display: flex;
+	margin-left: 4rem;
+}
+
+.left-sidebar .slide-arrows {
+  background-color: #3759f0;
+  width: 2rem;
+  height: 1rem;
+	z-index: 5;
+}
+
+.left-sidebar .slide-arrow-container .right {
+	margin-left: 1rem;
+}
+
+.left-sidebar .slide-arrows .left-arrows {
+  margin-top: 0.4rem;
+  margin-left: 0.5rem;
+	-webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.left-sidebar .slide-arrows .right-arrows {
+  margin-top: 0.4rem;
+  margin-left: 0.5rem;
+
+}
+
+.front .right-sidebar {
+  display: none;
+}
+
+.front .right-sidebar .dots-square {
+  width: 2rem;
+  height: 2rem;
+}
+
+.front .right-sidebar .vertical-text {
+  font-size: 10px;
+  writing-mode: vertical-rl;
+  padding-right: 5rem;
+  padding-top: 1rem;
+}
+
+.front .right-sidebar .right-slide-number {
+  font-size: 10px;
+}
+
+.front .center-image {
+  background-size: cover;
+  width: 80%;
+  height: 25rem;
+  : brightness(0.5);
+  -webkit-filter: brightness(0.5);
+	padding-top: 7rem;
+}
+
+.front .text-over-image {
+  left: 10rem;
+  top: 18rem;
+  position: absolute;
+  z-index: 2;
+}
+.front .text-over-image h1 {
+  font-size: 50px;
+	padding-bottom: 1rem;
+}
+
+.front .text-over-image p{
+  font-size: 18px;
+  width: 40ch;
+  margin-top: 1rem;
+	opacity: 0.8;
+}
+
+.front-subtext {
+  display: flex;
+}
+
+.front hr {
+  margin-top: 1em;
+}
+
+.front .arrow {
+  margin-top: 1rem;
+}
+
+/* First chapter first slide */
+.half-gradient-background {
+	background-image: linear-gradient(138deg, #2f69f8, #45d4fb);
+  background-image: -webkit-linear-gradient(138deg, #2f69f8, #45d4fb);
+  background-image: -o-linear-gradient(138deg, #2f69f8, #45d4fb);
+	height: 5rem;
+}
+
+.c1-s1-background {
+  width: 50%;
+}
+
+.c1-s1 .header {
+  display: flex;
+  justify-content: space-between;
+	height: 5rem;
+	position: relative;
+}
+
+.c1-s1 .header .header-text {
+	position: absolute;
+  left: 1rem;
+	top: 1rem;
+}
+
+.c1-s1 .header .header-text div {
+	font-family: sans-serif;
+  font-size: 2ch;
+  line-height: 2rem;
+	text-transform: uppercase;
+}
+
+.c1-s1 .header .header-text p {
+	font-size: small;
+	font-weight: bold;
+}
+
+.c1-s1 .box-right {
+	position: absolute;
+	top: 1rem;
+	left: 27rem;
+	height: 2rem;
+}
+
+.c1-s1 .header .slide-arrows {
+  width: 100%;
+  max-width: 8ch;
+	position: absolute;
+  top: 1rem;
+  right: 1rem;
+	z-index: 5;
+}
+
+.c1-s1 .header .slide-arrows .left-arrow {
+  padding-right: 1rem;
+	z-index: 5;
+}
+
+.c1-s1 .header .slide-arrows .left-arrow img {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+	z-index: 5;
+}
+
+.c1-s1 .left-image {
+  width: 100%;
+  min-width: 50rem;
+  filter: grayscale(1);
+  height: 40rem;
+}
+
+.c1-s1 .text-over-image {
+  position: absolute;
+  top: 25rem;
+  left: 10rem;
+  font-size: small;
+}
+
+.c1-s1 .text-over-image .c1-s1-subtext {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.c1-s1 .text-over-image .c1-s1-subtext p {
+  margin-left: 1rem;
+  width: 100%;
+  max-width: 70ch;
+  text-align: justify;
+	font-size: 15px;
+  line-height: 1.44;
+  letter-spacing: 2px;
+}
+
+/* First chapter second slide */
+.c1-s2 {
+  text-align: center;
+  padding-top: 10rem;
+}
+
+.c1-s2 .header-text {
+  text-transform: uppercase;
+  width: 100%;
+  max-width: 60ch;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 30px;
+  font-weight: bold;
+	letter-spacing: 0.88px;
+  font-size: 24px;
+}
+
+.c1-s2 .c1-s2-subtext {
+  margin-top: 10rem;
+  width: 100%;
+  max-width: 100ch;
+  display: block;
+  margin-left: auto;
+  margin-right: 10rem;
+}
+
+.c1-s2 .c1-s2-subtext p {
+  text-align: end;
+  width: 100%;
+  max-width: 80ch;
+  margin-left: 10rem;
+  line-height: 35px;
+}
+
+/* First chapter third slide */
+.c1-s3 .square-border {
+  border: 10px solid #3859ef;
+  box-sizing: border-box;
+  position: absolute;
+  width: 50rem;
+  height: 40rem;
+  margin: 0;
+  margin-top: 2rem;
+  z-index: -1;
+}
+
+.c1-s3 .video-button {
+	position: absolute;
+  right: 2rem;
+  bottom: 7rem;
+  z-index: 2;
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+	background-color: transparent;
+  border: 0;
+}
+
+.c1-s3 .play-button {
+	width: 5rem;
+  height: 5rem;
+}
+
+.c1-s3 .right-image {
+  width: 100%;
+  display: block;
+	position: absolute;
+  filter: brightness(0.5);
+	left: 2rem;
+  top: 5rem;
+  max-width: 98%;
+  height: 40rem;
+  object-fit: cover;
+}
+
+.c1-s3 .text-over-image {
+  position: absolute;
+  width: 100%;
+  max-width: 95ch;
+  border: 1px solid white;
+  padding: 1rem;
+  text-align: justify;
+  left: 3rem;
+	top: auto;
+  bottom: 8rem;
+}
+
+.c1-s3 .text-over-image .c1-s1-subtext p {
+	max-width: 80ch;
+	font-size: 20px;
+}
+
+/* First chapter fourth slide */
+.full-image {
+  width: 100%;
+  filter: brightness(0.5);
+  height: 50rem;
+}
+
+.c1-s4 .text-over-image {
+  top: auto;
+	left: 2rem;
+  bottom: 5rem;
+  border: 1px solid white;
+  padding: 1rem;
+  border-top-left-radius: 1rem;
+  border-bottom: 0;
+  border-top-right-radius: 1rem;
+}
+
+.c1-s4 .text-over-image .c1-s4-subtext p {
+	font-size: 20px;
+}
+
+/* First chapter fifth slide */
+.c1-s5 .text-over-image {
+  bottom: 5rem;
+	top: auto;
+	left: 2rem;
+  border: 1px solid white;
+  padding: 1rem;
+  border-top-left-radius: 1rem;
+  border-bottom: 0;
+  border-top-right-radius: 1rem;
+}
+
+.c1-s5 .text-over-image .c1-s4-subtext p {
+	font-size: 20px;
+}
+
+/* First chapter sixth slide */
+.c1-s6 .header {
+  padding-top: 10rem;
+  text-transform: uppercase;
+  line-height: 45px;
+  width: 100%;
+  max-width: 50ch;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 30px;
+	letter-spacing: 3.5px;
+}
+
+.c1-s6 .text-image {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10rem;
+}
+
+.c1-s6 .text-image .c1-s6-subtext {
+  line-height: 20px;
+  width: 100%;
+  padding-top: 5rem;
+  font-size: larger;
+  line-height: 2rem;
+  padding-left: 3rem;
+}
+
+.c1-s6 .text-image .text-left {
+  text-align: end;
+  max-width: 30ch;
+	letter-spacing: 3.5px;
+}
+
+.c1-s6 .text-image .c1-s6-image-container {
+	position: relative;
+}
+
+.c1-s6 .text-image .c1-s6-image {
+	height: 20rem;
+	position: absolute;
+	right: 5rem;
+}
+
+.c1-s6 .text-image .shadow-1 {
+	position: absolute;
+  right: 6rem;
+  top: -1rem;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+.c1-s6 .text-image .shadow-2 {
+	position: absolute;
+  right: 7rem;
+  top: -2rem;
+  z-index: -2;
+  opacity: 0.1;
+}
+
+
+/* First chapter seventh slide */
+.c1-s7 .text-over-image {
+  top: 30rem;
+}
+
+.c1-s7 .text-over-image .c1-s7-subtext p {
+  max-width: 65ch;
+	letter-spacing: 3.5px;
+	font-size: 17px;
+}
+
+.c1-s7 .video-button {
+	position: absolute;
+  right: 2rem;
+  bottom: 7rem;
+  z-index: 2;
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+	background-color: transparent;
+  border: 0;
+}
+
+.c1-s7 .play-button {
+	width: 5rem;
+  height: 5rem;
+}
+
+.c1-s7 .full-image {
+	object-fit: cover;
+	width: 100%;
+	height: 50rem;
+}
+
+/* First chapter eighth slide */
+.c1-s8 .text-image .c1-s8-subtext {
+	width: auto;
+	right: 0;
+	position: absolute;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 1rem;
+}
+
+.c1-s8 .text-image .c1-s6-subtext .text-right {
+  text-align: start;
+  max-width: 25ch;
+	letter-spacing: 3.5px;
+	font-size: 25px;
+}
+
+.c1-s8 .text-image .c1-s8-image-container {
+	position: relative;
+}
+
+.c1-s8 .text-image .c1-s8-image {
+	height: 20rem;
+	position: absolute;
+	left: 5rem;
+}
+
+.c1-s8 .text-image .shadow-1 {
+	position: absolute;
+  left: 6rem;
+  top: -1rem;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+.c1-s8 .text-image .shadow-2 {
+	position: absolute;
+  left: 7rem;
+  top: -2rem;
+  z-index: -2;
+  opacity: 0.1;
+}
+
+/* First chapter ninth slide */
+.c1-s9 .text-over-image{
+  top: auto;
+	bottom: 5rem;
+	max-width: 130ch;
+	left: 3rem;
+}
+
+/* Second chapter first slide */
+.c2-s1 .c2-s1-background {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  height: 5rem;
+}
+
+.c2-s1 .c2-s1-background .play-audio {
+	right: auto;
+	left: 2rem;
+}
+
+.c2-s1 .header {
+  display: flex;
+	justify-content: space-between;
+	height: 5rem;
+	position: relative;
+}
+
+.c2-s1 .header .header-text {
+	position: absolute;
+  right: 4rem;
+	top: 1rem;
+	text-align: end;
+}
+
+.c2-s1 .header .header-text div {
+	font-family: sans-serif;
+  font-size: 2ch;
+  line-height: 2rem;
+	text-transform: uppercase;
+}
+
+.c2-s1 .header .header-text p {
+	font-weight: bold;
+}
+
+.c2-s1 .header .slide-arrows {
+	position: absolute;
+	left: 5rem;
+	top: 2rem;
+  width: 100%;
+  max-width: 8ch;
+	z-index: 5;
+}
+
+.c2-s1 .box-left {
+	position: absolute;
+  top: 1.5rem;
+  right: 27rem;
+  height: 2rem;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.c2-s1 .header img {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.c2-s1 .quote-background {
+	background-color: white;
+  width: 25rem;
+  position: absolute;
+  height: 10rem;
+  right: 0;
+  bottom: 0;
+}
+
+.c2-s1 .right-image {
+  width: 100%;
+  max-width: 80%;
+  margin-left: auto;
+  display: block;
+  filter: grayscale(1);
+  height: 35rem;
+}
+
+.c2-s1 .header .slide-arrows .left-arrow {
+  padding-right: 1rem;
+	z-index: 5;
+}
+
+.c2-s1 .header .slide-arrows .left-arrow img {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+	z-index: 5;
+}
+
+.c2-s1 .text-over-image .c2-s1-subtext p {
+  position: absolute;
+  top: 30rem;
+	left: auto;
+	right: 5rem;
+	text-align: end;
+  font-size: 15px;
+  width: 100%;
+  max-width: 75ch;
+}
+
+.c2-s1 .quote {
+  display: flex;
+  padding-top: 2rem;
+	right: 15rem;
+	position: absolute;
+}
+
+.c2-s1 .quote .quote-symbol-left {
+  height: 1rem;
+  object-fit: contain;
+  width: 100%;
+	max-width: 2rem;
+  padding-left: 20rem;
+  padding-right: 1rem;
+}
+
+.c2-s1 .quote .quote-text {
+  width: 100%;
+  max-width: 80ch;
+	mix-blend-mode: difference;
+	color: #fff;
+}
+
+/* Second chapter second slide */
+.c2-s2 .slideshow-img-1 {
+	display: none;
+}
+
+.c2-s2 .c2-s2-image-container {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 10rem;
+}
+
+.c2-s2 .c2-s2-image-container .c2-s2-image {
+	width: 15rem;
+	height: 30rem;
+}
+
+.c2-s2 .c2-s2-image-container .center {
+	border: 1rem solid #3859ef;
+}
+
+#myImg,
+#myImg1,
+#myImg2 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+#myImg1:hover {opacity: 0.7;}
+#myImg2:hover {opacity: 0.7;}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.modal-content, #caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+/* Second chapter third slide */
+.c2-s3 .text-over-image {
+  font-size: small;
+}
+
+.c2-s3 .text-over-image .text-top {
+  position: absolute;
+  top: 5rem;
+  left: 2rem;
+  opacity: 0.8;
+  text-align: justify;
+}
+
+.c2-s3 .text-over-image .text-top p {
+	font-size: 20px;
+  max-width: 60ch;
+  width: 100%;
+	line-height: 1.5rem;
+}
+
+.c2-s3 .text-over-image .text-bottom {
+  position: absolute;
+  top: 40rem;
+  text-align: end;
+  width: 100%;
+  max-width: 85ch;
+  right: 10rem;
+  opacity: 0.8;
+  text-align: justify;
+}
+
+.c2-s3 .text-over-image .text-bottom p {
+	font-size: 20px;
+  max-width: 55ch;
+  width: 100%;
+  text-align: end;
+	line-height: 1.5rem;
+}
+
+/* Second chapter fourth slide */
+.c2-s4 .c2-s4-column {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10rem;
+}
+
+.c2-s4 .c2-s4-column .vertical-line {
+  border-left: 2px solid white;
+  height: 25rem;
+  left: 50%;
+  margin-top: 10rem;
+}
+
+.c2-s4 .c2-s4-column .c2-s4-row-1 {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  font-size: small;
+}
+
+.c2-s4 .c2-s4-column .c2-s4-row-1 .top-left-image {
+  width: 100%;
+  max-width: 25rem;
+  height: 20rem;
+}
+
+.c2-s4 .c2-s4-column .c2-s4-row-1 .text-below-image p{
+  width: 100%;
+  max-width: 40ch;
+  padding-top: 2rem;
+  text-align: justify;
+	line-height: 1.38;
+  font-size: 18px;
+}
+
+.c2-s4 .c2-s4-column .c2-s4-row-2 {
+  display: flex;
+  flex-direction: column;
+  padding-right: 2rem;
+  font-size: small;
+}
+
+.c2-s4 .c2-s4-column .c2-s4-row-2 .border-1{
+  position: relative;
+}
+
+.c2-s4 .c2-s4-column .c2-s4-row-2 .border-1 .bottom-right-image {
+  width: 100%;
+  max-width: 25rem;
+  height: 20rem;
+}
+
+.c2-s4 .c2-s4-column .c2-s4-row-2 .text-above-image p{
+  width: 100%;
+  max-width: 40ch;
+  padding-bottom: 2rem;
+  text-align: justify;
+	line-height: 1.38;
+  font-size: 18px;
+}
+
+/* Second chapter fifth slide */
+.c2-s5 .text-over-image {
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+  text-transform: uppercase;
+  width: 100%;
+  max-width: 50ch;
+  text-align: justify;
+	font-size: 20px;
+  line-height: 1.38;
+}
+
+.c2-s5 .text-over-image .text-top p {
+	font-weight: 100;
+}
+
+/* Second chapter sixth slide */
+.c2-s6 {
+  text-align: justify;
+}
+
+.c2-s6 .hr-1 hr {
+  position: absolute;
+  top: 2rem;
+}
+
+.c2-s6 .text-top {
+  width: 100%;
+  max-width: 70ch;
+  line-height: 2rem;
+  text-transform: uppercase;
+  padding-left: 5rem;
+  position: absolute;
+  top: 5rem;
+}
+
+.c2-s6 .text-top p {
+	font-size: 23px;
+	line-height: 1.38;
+}
+
+.c2-s6 .quote-symbol-right {
+  object-fit: contain;
+  padding-left: 2rem;
+  position: absolute;
+  top: 20rem;
+  right: 0;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.c2-s6 .c2-s6-row {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 27rem;
+  flex-direction: row;
+  padding-left: 5rem;
+}
+
+.c2-s6 .c2-s6-row .bottom-left-image {
+  width: 100%;
+  max-width: 30rem;
+  height: 20rem;
+}
+
+.c2-s6 .c2-s6-row .text-right {
+  width: 100%;
+  max-width: 40ch;
+  line-height: 2rem;
+  padding-left: 2rem;
+  padding-top: 1rem;
+}
+
+.c2-s6 .c2-s6-row .text-right p {
+	font-size: 20px;
+  line-height: 1.38;
+}
+
+.c2-s6 .hr-2 hr {
+  position: absolute;
+  top: 48rem;
+}
+
+/* Second chapter seventh slide */
+.c2-s7 .text-over-image {
+  top: 35rem;
+}
+
+/* Third chapter first slide */
+.c3-s1 .video-button {
+	position: absolute;
+  right: 5rem;
+  bottom: 7rem;
+  z-index: 2;
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+	background-color: transparent;
+  border: 0;
+}
+
+.c3-s1 .play-button {
+	width: 5rem;
+  height: 5rem;
+}
+
+.c3-s1 .c3-s1-image {
+	height: 45rem;
+	filter: brightness(0.5);
+	object-fit: cover;
+	min-width: 55rem;
+}
+
+.c3-s1 .text-over-image {
+	left: 5rem;
+}
+
+.c3-s1 .text-over-image .c3-s1-subtext p {
+  max-width: 55ch;
+}
+
+/* Third chapter second slide */
+.c3-s2 .text-over-image {
+	max-width: 70ch;
+	top: 10rem;
+}
+
+/* Third chapter third slide */
+.c3-s3 .text-over-image {
+	top: 35rem;
+}
+
+.c3-s3 .text-over-image .c3-s3-heading {
+	font-size: 3rem;
+	padding-left: 1rem;
+	padding-bottom: 2rem;
+	letter-spacing: 0.5rem;
+	text-transform: uppercase;
+}
+
+.c3-s3 .text-over-image .c3-s3-subtext p {
+	max-width: 75ch;
+	text-transform: uppercase;
+	font-size: 17px;
+}
+
+/* Third chapter fourth slide */
+.c3-s4 {
+	height: 25rem;
+}
+
+.half-image {
+	width: 100%;
+  filter: brightness(0.5);
+	height: 25rem;
+	object-position: top;
+}
+
+.c3-s4 .text-over-image {
+	top: 15rem;
+	left: 5rem;
+	text-transform: uppercase;
+}
+
+/* Third chapter fifth slide */
+.c3-s5 {
+	height: 25rem;
+}
+
+.c3-s5 .text-over-image {
+	top: 15rem;
+	right: 2rem;
+	left: auto;
+	text-transform: uppercase;
+}
+
+.c3-s5 .text-over-image .c3-s5-subtext p {
+	text-align: end;
+}
+
+/* Third chapter sixth slide */
+.c3-s6 .top-left-image {
+	position: absolute;
+  left: 0;
+  width: 90%;
+	height: 45rem;
+	top: 0;
+}
+
+.c3-s6 .text-over-image {
+	bottom: 10rem;
+}
+
+/* Third chapter seventh slide */
+.c3-s7 .bottom-right-image {
+	position: absolute;
+  right: 0;
+  width: 90%;
+	height: 45rem;
+	bottom: 0;
+}
+
+.c3-s7 .text-over-image {
+	right: 2rem;
+  left: auto;
+}
+
+/* Third chapter eighth slide */
+.c3-s8 .quote {
+	top: 20rem;
+  position: absolute;
+  padding-left: 5rem;
+}
+
+.c3-s8 .text-over-image {
+	text-transform: uppercase;
+}
+
+.c3-s8 .text-over-image .c3-s8-subtext p {
+	text-align: end;
+	max-width: 65ch;
+}
+
+/* Fourth chapter second slide */
+.c4-s2 .text-over-image {
+	display: flex;
+	left: auto;
+}
+
+.c4-s2 .dot-gradient {
+  top: 23rem;
+	width: 40rem;
+	height: 15rem;
+	position: absolute;
+	left: 0;
+	opacity: 0.2;
+	object-fit: contain;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+	-webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.c4-s2 .text-over-image .c4-s2-subtext p {
+	opacity: 1;
+}
+
+.c4-s2 .text-over-image .gradient-border {
+	width: 1rem;
+	height: 12rem;
+	background-image: linear-gradient(177deg, #45d4fb, #2f69f8);
+}
+
+/* Fourth chapter third slide */
+.c4-s3 .text-over-image {
+	display: flex;
+	left: auto;
+	right: 0;
+}
+
+.c4-s3 .text-over-image .c4-s3-subtext p {
+	opacity: 1;
+	line-height: 1.5rem;
+}
+
+.c4-s3 .dot-gradient {
+  top: 23rem;
+	width: 40rem;
+	height: 15rem;
+	position: absolute;
+	right: 0;
+	opacity: 0.2;
+	object-fit: contain;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+}
+
+.c4-s3 .text-over-image .gradient-border {
+	width: 1rem;
+	height: 13rem;
+	background-image: linear-gradient(177deg, #45d4fb, #2f69f8);
+}
+
+.c4-s3 .text-over-image .gradient-border {
+  margin-left: 1rem;
+}
+
+/* Fourth chapter fourth slide */
+.c4-s4 .text-over-image {
+	background-color: #191919;
+	top: 30rem;
+	left: auto;
+  right: 0;
+  clip-path: polygon( 0 0, 100% 0, 100% 100%, 10% 100% );
+}
+
+.c4-s4 .text-over-image .c4-s4-subtext {
+	left: auto;
+	right: 2rem;
+	padding: 0 2rem 1rem 2rem;
+}
+
+.c4-s4 .text-over-image .c4-s4-subtext p {
+	text-align: end;
+}
+
+/* Fourth chapter fourth slide */
+.c4-s5 .text-over-image {
+	top: 35rem;
+}
+
+/* Media queries for different screen sizes */
+@media screen and (min-width: 375px) {}
+
+@media screen and (min-width: 426px) {
+  .front .text-over-image p {
+    width: auto;
+  }
+
+  .front .front-background .right-sidebar {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+    right: -2rem;
+    top: 13rem;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .front .right-sidebar {
+    right: 2rem;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  .front .front-background .right-sidebar {
+    right: 0;
+  }
+
+	.c1-s1 .box-right {
+    left: 28rem;
+	}
+
+	.c1-s1 .header .slide-arrows {
+    right: 2rem;
+	}
+
+	.c2-s1 .box-left {
+		right: 28rem;
+	}
+
+	.c3-s1 .video-button {
+		right: 7rem;
+	}
+
+	.c3-s1 .c3-s1-image {
+		min-width: 58rem;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.c1-s1 .text-over-image {
+    left: 15rem;
+  }
+
+  .c1-s3 .text-over-image {
+    right: 15rem;
+    max-width: 110ch;
+  }
+
+	.c1-s4 .text-over-image .c1-s4-subtext p {
+		max-width: 90ch;
+	}
+
+	.c1-s6 .text-image .c1-s6-subtext {
+    padding-left: 0;
+		padding-right: 0;
+		right: 15rem;
+	}
+
+	.c1-s7 .text-over-image .c1-s7-subtext p {
+	  max-width: 100ch;
+	}
+
+	.c1-s8 .text-image .c1-s8-image-container {
+		margin-left: 5rem;
+	}
+
+	.c2-s1 .box-left {
+		right: 34rem;
+	}
+
+	.c2-s1 .quote .quote-symbol-left {
+    padding-left: 30rem;
+	}
+
+  .c2-s1 .text-over-image .c2-s1-subtext p {
+		left: auto;
+		right: 10rem;
+		text-align: end;
+    max-width: 100ch;
+  }
+
+	.c2-s1 .header .header-text {
+		right: 10rem;
+	}
+
+  .c2-s4 .c2-s4-column .c2-s4-row-1 {
+    padding-left: 10rem;
+  }
+
+  .c2-s4 .c2-s4-column .c2-s4-row-2 {
+    padding-right: 10rem;
+  }
+
+  .c2-s6 .c2-s6-row {
+    padding-left: 12rem;
+  }
+
+  .c2-s6 .c2-s6-row .text-right {
+    max-width: 50ch;
+    padding-top: 2rem;
+  }
+
+  .c2-s6 .c2-s6-row .bottom-left-image {
+    object-fit: contain;
+  }
+
+	.c3-s1 .text-over-image .c3-s1-subtext p {
+    max-width: 70ch;
+	}
+
+	.c3-s2 .text-over-image {
+    max-width: 100ch;
+	}
+
+	.c3-s4 .text-over-image {
+		left: 5rem;
+	}
+
+	.c3-s5 .text-over-image {
+		left: auto;
+	}
+
+	.c3-s6 .text-over-image {
+		left: 5rem;
+    right: auto;
+	}
+
+	.c3-s6 .text-over-image .c3-s6-subtext p {
+		max-width: 105ch;
+	}
+
+	.c3-s7 .text-over-image {
+		right: 2rem;
+	  left: auto;
+	}
+
+	.c3-s7 .text-over-image .c3-s7-subtext p {
+		max-width: 105ch;
+	}
+
+	.c4-s2 .text-over-image {
+		left: auto;
+	}
+
+	.c4-s3 .text-over-image {
+		left: auto;
+		right: 0;
+		top: 30rem;
+	}
+
+	.c4-s4 .text-over-image {
+		left: auto;
+	  right: 0;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.front .front-header .logo {
+		width: 8%;
+    left: 9rem;
+    height: 4rem;
+	}
+
+	.front .front-header .header-text {
+		right: 9rem;
+	}
+
+	.front .text-over-image {
+	  left: 15rem;
+	}
+
+	.c1-s1 .header {
+	  display: flex;
+	  justify-content: space-between;
+		height: 5rem;
+		position: relative;
+	}
+
+	.c1-s1 .header .header-text {
+	  left: 10rem;
+	}
+
+	.c1-s1 .box-right {
+    left: 41rem;
+	}
+
+	.c1-s1 .header .slide-arrows {
+    right: 2rem;
+	}
+
+  .c1-s1 .c1-s1-background .left-image {
+    min-width: 75rem;
+  }
+
+	.c1-s3 .text-over-image .c1-s1-subtext p {
+    max-width: 105ch;
+	}
+
+	.c1-s6 .text-image .c1-s6-subtext {
+    padding-left: 0;
+		padding-right: 0;
+	}
+
+	.c1-s6 .text-image .c1-s6-image-container {
+		margin-right: 5rem;
+	}
+
+	.c1-s6 .text-image .text-left {
+    max-width: 40ch;
+	}
+
+	.c1-s8 .text-image .c1-s8-image-container {
+		margin-left: 10rem;
+	}
+
+	.c1-s8 .text-image .text-right {
+    max-width: 40ch;
+	}
+
+  .c1-s9 .text-over-image .c1-s4-subtext p {
+    max-width: 120ch;
+  }
+
+	.c2-s1 .box-left {
+		right: 41rem;
+	}
+
+	.c2-s1 .quote-background {
+		width: 40rem;
+	}
+
+	.c3-s1 .text-over-image {
+    left: 10rem;
+	}
+
+	.c3-s1 .video-button {
+    right: 17rem;
+	}
+
+	.c4-s2 .dot-gradient {
+		top: 23rem;
+	}
+
+	.c4-s3 .dot-gradient {
+		top: 28rem;
+	}
+
+  .c2-s6 .c2-s6-row .text-right {
+    padding-left: 10rem;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+	.front .front-header .logo {
+		width: 6rem;
+    left: 12rem;
+    height: 3rem;
+	}
+
+	.front .front-header .header-text {
+		right: 12rem;
+	}
+
+	.front .text-over-image {
+	  left: 20rem;
+		top: 20rem;
+	}
+
+	.front .center-image {
+		height: 32rem;
+	}
+
+	.c1-s1 .box-right {
+    left: 56rem;
+	}
+
+	.c1-s6 .text-image .c1-s6-subtext {
+    padding-left: 30rem;
+	}
+
+	.c1-s7 .text-over-image .c1-s7-subtext p {
+    max-width: 120ch;
+	}
+
+	.c1-s6 .text-image .c1-s6-image-container {
+		margin-right: 20rem;
+	}
+
+	.c1-s8 .text-image .c1-s8-subtext {
+		right: 20rem;
+    font-size: 25px;
+		padding-left: 0;
+	}
+
+	.c1-s8 .text-image .c1-s8-image-container {
+		margin-left: 20rem;
+	}
+
+	.c2-s1 .box-left {
+		right: 56rem;
+	}
+
+	.c2-s6 .c2-s6-row {
+    padding-left: 27rem;
+	}
+
+	.c3-s1 .video-button {
+		right: 40rem;
+	}
+
+	.c3-s1 .c1-s1-background .c3-s1-image {
+		min-width: 85rem;
+	}
+
+	.c4-s2 .dot-gradient {
+		top: 23rem;
+	}
+}
+
+@media screen and (min-width: 1930px) {
+	.front .front-header .logo {
+		width: 6rem;
+    left: 12rem;
+    height: 3rem;
+	}
+
+	.front .front-header .header-text {
+		right: 12rem;
+	}
+
+	.front .text-over-image {
+	  left: 17rem;
+		top: 20rem;
+	}
+
+	.front .center-image {
+		height: 32rem;
+	}
+
+	.c1-s1 .c1-s1-background .left-image {
+    min-width: 130rem;
+    height: 45rem;
+  }
+
+  .c1-s1 .text-over-image {
+    top: 30rem;
+    left: 20rem;
+    font-size: larger;
+  }
+
+  .c1-s1 .text-over-image {
+    left: 30rem;
+    top: 35rem;
+  }
+
+	.c1-s3 .text-over-image {
+		top: 30rem;
+	}
+
+	.c1-s1 .box-right {
+    left: 74rem;
+	}
+
+	.c1-s1 .header .header-text {
+    left: 25rem;
+	}
+
+	.c1-s6 .text-image .c1-s6-subtext {
+    padding-left: 50rem;
+	}
+
+	.c1-s6 .text-image .c1-s6-image-container {
+		margin-right: 40rem;
+	}
+
+	.c1-s7 .text-over-image .c1-s7-subtext p {
+    max-width: 120ch;
+    font-size: 25px;
+	}
+
+	.c1-s8 .text-image .c1-s8-subtext {
+    right: 40rem;
+		padding-left: 0;
+	}
+
+	.c1-s8 .text-image .c1-s8-image-container {
+		margin-left: 40rem;
+	}
+
+	.c2-s1 .box-left {
+		right: 76rem;
+	}
+
+	.c2-s1 .quote .quote-symbol-left {
+    padding-left: 50rem;
+	}
+
+  .c2-s6 .quote-symbol-right {
+    padding-left: 10rem;
+  }
+
+  .c2-s6 .text-top {
+    padding-left: 30rem;
+  }
+
+  .c2-s6 .c2-s6-row {
+    padding-left: 50rem;
+  }
+
+	.c3-s1 .c1-s1-background .left-image {
+		min-width: 105rem;
+	}
+
+	.c3-s1 .video-button {
+		right: 60rem;
+	}
+
+	.c3-s4 .text-over-image {
+    top: 10rem;
+		left: 5rem;
+	}
+
+	.c3-s5 .text-over-image {
+    top: 15rem;
+		left: auto;
+	}
+
+	.c3-s6 .text-over-image {
+		left: 2rem;
+    right: auto;
+	}
+
+	.c3-s7 .text-over-image {
+		right: 2rem;
+    left: auto;
+    max-width: 70rem;
+	}
+
+	.c3-s8 .quote {
+    top: 30rem;
+		padding-left: 20rem;
+	}
+
+	.c4-s2 .text-over-image {
+		left: auto;
+		top: 30rem;
+	}
+
+	.c4-s2 .dot-gradient {
+		width: 60rem;
+		top: 30rem;
+	}
+
+	.c4-s3 .text-over-image {
+		left: auto;
+		right: 0;
+		top: 30rem;
+	}
+
+	.c4-s3 .dot-gradient {
+		width: 60rem;
+	}
+
+	.c4-s4 .text-over-image {
+		left: auto;
+	  right: 0;
+	}
+}
+
+/* parallax images */
+.parallax-images {
+  width: 100%;
+  height: 25rem;
+	opacity: 0.3;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sky {
+  background-image: url("../images/parallax_images/sky.png");
+}
+
+.doctor {
+  background-image: url("../images/parallax_images/doctor.jpg");
+	position: relative;
+}
+
+.beer {
+  background-image: url("../images/parallax_images/beer.png");
+}
+
+.do-not-cross {
+  background-image: url("../images/parallax_images/do_not_cross.png");
+}
+
+.red-image {
+  background-image: url("../images/parallax_images/red_image.png");
+}
+
+.volunteers {
+  background-image: url("../images/parallax_images/volunteers.png");
+}
+
+.stars {
+  background-image: url("../images/parallax_images/stars.png");
+}
+
+.hands {
+  background-image: url("../images/parallax_images/hands.png");
+}
+
+/* Scroll to top button */
+#top-button {
+  display: inline-block;
+  background-color: #000;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s,
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#top-button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#top-button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#top-button:active {
+  background-color: #555;
+}
+#top-button.show {
+  opacity: 1;
+  visibility: visible;
+}

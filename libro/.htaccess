@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "libro"
+AuthUserFile "/home/s0flft2in3k3/.htpasswds/public_html/libro/passwd"
+require valid-user

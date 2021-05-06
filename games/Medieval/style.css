@@ -1,0 +1,17 @@
+body {
+    max-width: 1000px;
+    margin: auto !important;
+    background-color: black;
+}
+
+.p5Canvas {
+    border: 5px ridge #00b7ff;
+}
+
+.instructions {
+    font-weight: bold;
+    font-size: 28;
+    text-align: center;
+    color: whitesmoke;
+    padding: 50px 0;
+}
