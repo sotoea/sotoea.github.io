@@ -7,41 +7,41 @@
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
 <script>
-function SubForm (){
-    $.ajax({
-        url:'https://api.apispreadsheets.com/data/12571/',
-        type:'post',
-        data:$("#myForm").serializeArray(),
-        success: function(){
-          alert("Form Data Submitted :)")
-        },
-        error: function(){
-          alert("There was an error :(")
-        }
-    });
-}
+  document.getElementById('datelog').value = new Date().toDateInputValue();
+  function SubForm (){
+      $.ajax({
+          url:'https://api.apispreadsheets.com/data/12571/',
+          type:'post',
+          data:$("#myForm").serializeArray(),
+          success: function(){
+            alert("Form Data Submitted :)")
+          },
+          error: function(){
+            alert("There was an error :(")
+          }
+      });
+  }
 </script>
 </head>
 <body>
   <form id="myForm">
-    <label>Full Name</label>
+    <label for="people">Who Are You?</label>
+    <select id="people" name="people">
+      <option value="elena">Elena</option>
+      <option value="luis">Luis</option>
+      <option value="ale">Ale</option>
+      <option value="shannon">Shannon</option>
+      <option value="eduardo">Eduardo</option>
+      <option value="v">V</option>
+      <option value="alex">Alex</option>
+      <option value="vero">Vero</option>
+      <option value="juan">Juan</option>
+      <option value="gaby">Gaby</option>
+    </select>
+    
     <br/>
-    <input name="full_name" />
-    <br/>
-    <label>Email</label>
-    <br/>
-    <input name="email" />
-    <br/>
-    <label>Age</label>
-    <br/>
-    <input type="radio" id="age" name="age" value="18-35" /> 18-35<br/>
-    <input type="radio" id="age" name="age" value="35+" /> 35+<br/>
-    <br/>
-    <label>Message</label>
-    <br/>
-    <textarea name="message">
-    </textarea>
-    <br/>
+    <label for="datelog">Log Date:</label>
+    <input type="date" id="datelog" name="datelog"> 
     <br/>
   </form>
   <button onclick="SubForm()">Submit</button>
