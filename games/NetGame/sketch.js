@@ -97,7 +97,7 @@ function draw() {
     handleBullets(); // Update, draw, and check collisions of bullets
     pop();
     strokeWeight(1);
-    stroke(255);
+    noStroke();
     fill(255);
     text("Number Of Players: " + clients.length, 10, 20);
     text("Health: " + health, 10, 40);
