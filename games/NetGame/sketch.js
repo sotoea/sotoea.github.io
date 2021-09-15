@@ -93,9 +93,10 @@ function draw() {
         }
     }
     stroke(0, 0, 255);
-    strokeWeight(1);
+    
     handleBullets(); // Update, draw, and check collisions of bullets
     pop();
+    strokeWeight(1);
     stroke(255);
     fill(255);
     text("Number Of Players: " + clients.length, 10, 20);
@@ -125,9 +126,9 @@ function draw() {
         stroke(200, 200, 200);
         ellipse(cannonX + width / 2, cannonY + height / 2, 5, 5);
     }else{
-        stroke(255);
+        noStroke();
         fill(255);
-        text("You Died\nPress ' r ' to start again.", width/2, height/2);
+        text("You Died\nPress ' r ' to start again.", width/2 - 100, height/2);
         diameter = 0;
     }
 }
