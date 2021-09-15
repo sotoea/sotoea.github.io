@@ -40,7 +40,7 @@ function setup() {
     speedX = 0;
     speedY = 0;
     speedLimit = 5;
-    diameter = 25;
+    diameter = 28;
     pColor = color(Math.floor(random(100, 255)), Math.floor(random(100, 255)), Math.floor(random(100, 255)));
 }
 
@@ -91,6 +91,8 @@ function draw() {
         if (c != i && clients[i].h > 0) {
             fill(clients[i].r, clients[i].g, clients[i].b);
             ellipse(clients[i].x + width / 2, clients[i].y + height / 2, clients[i].d, clients[i].d);
+            imageMode(CENTER);
+            image(blueSkin, clients[i].x + width / 2, clients[i].y + height / 2);
             fill(255, 0, 0);
             ellipse(clients[i].cannonX + clients[i].x + width / 2, clients[i].cannonY + clients[i].y + height / 2, 5, 5);
         }
