@@ -122,6 +122,7 @@ function draw() {
 
     if (health > 0) {
         ellipse(width / 2, height / 2, diameter, diameter);
+        imageMode(CENTER);
         image(blueSkin, width / 2, height / 2);
 
         calculateCannon();
