@@ -7,10 +7,15 @@
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
 <script>
-  document.getElementById('datelog').value = new Date().toDateInputValue();
+  
   function SubForm (){
+
+      var userField = document.getElementById("people");
+      console.log(userField.value);
+      var userUrl = 'https://api.apispreadsheets.com/data/12573/';
+
       $.ajax({
-          url:'https://api.apispreadsheets.com/data/12571/',
+          url:userUrl,
           type:'post',
           data:$("#myForm").serializeArray(),
           success: function(){
@@ -24,10 +29,10 @@
 </script>
 </head>
 <body>
-  <form id="myForm">
-    <label for="people">Who Are You?</label>
+  <form id="user">
+    <label for="people">Who Are You?</label><br/><br/>
     <select id="people" name="people">
-      <option value="elena">Elena</option>
+      <option value="elena" selected="selected">Elena</option>
       <option value="luis">Luis</option>
       <option value="ale">Ale</option>
       <option value="shannon">Shannon</option>
@@ -38,12 +43,24 @@
       <option value="juan">Juan</option>
       <option value="gaby">Gaby</option>
     </select>
-    
-    <br/>
-    <label for="datelog">Log Date:</label>
-    <input type="date" id="datelog" name="datelog"> 
     <br/>
   </form>
+  <br/>
+  <br/>
+  <form id="myForm">
+    
+    <label for="weight">Enter your weight:</label><br/><br/>
+    <input id="weight" name="weight" type="number" step="0.01">
+    <br/>
+    <br/>
+    <label for="datelog">Enter the date for the weight logged:</label><br/><br/>
+    <input type="date" id="datelog" name="datelog"> 
+    <br/><br/><br/>
+  </form>
   <button onclick="SubForm()">Submit</button>
+
+  <script>
+    document.getElementById('datelog').valueAsDate = new Date();
+  </script>
 </body>
 </html>

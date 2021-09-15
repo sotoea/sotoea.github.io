@@ -12,8 +12,11 @@ var cannonX, cannonY;
 
 var ground;
 
+var blueSkin;
+
 function preload() {
     ground = loadImage("img/background.png");
+    blueSkin = loadImage("img/blue.png");
 }
 
 function setup() {
@@ -104,21 +107,22 @@ function draw() {
 
     strokeWeight(2.5);
     if (speedTimer > 0) {
-        stroke(255, 255, 0);
+        stroke(255, 255, 0, 150);
         speedTimer--;
     } else if (speedTimer > -60) {
-        stroke(255, 0, 0);
+        stroke(255, 0, 0, 150);
         speedTimer--;
         speedLimit = 5;
         diameter = 25;
     } else {
-        stroke(0, 255, 0);
+        stroke(0, 255, 0, 150);
     }
     // Draw Player
     fill(pColor);
 
     if (health > 0) {
         ellipse(width / 2, height / 2, diameter, diameter);
+        image(blueSkin, width / 2, height / 2);
 
         calculateCannon();
         strokeWeight(1);
