@@ -12,11 +12,14 @@ var cannonX, cannonY;
 
 var ground;
 
-var blueSkin;
+var blueSkin, redSkin, yellowSkin;
+var started = false;
 
 function preload() {
     ground = loadImage("img/background.png");
     blueSkin = loadImage("img/blue.png");
+    redSkin = loadImage("img/red.png");
+    yellowSkin = loadImage("img/yellow.png");
 }
 
 function setup() {
@@ -41,12 +44,13 @@ function setup() {
     speedY = 0;
     speedLimit = 5;
     diameter = 28;
+    skin = -1;
     pColor = color(Math.floor(random(100, 255)), Math.floor(random(100, 255)), Math.floor(random(100, 255)));
 }
 
-function restartPlayer(){
-    x = random(100, width - 100);
-    y = random(100, height - 100);
+function restartPlayer() {
+    x = random(50, 800);
+    y = random(50, 600);
     upKey = false;
     downKey = false;
     leftKey = false;
@@ -63,12 +67,10 @@ function restartPlayer(){
 function draw() {
     if (bulletTimer > 0) bulletTimer--;
     background(0);
+
     textSize(20);
     fill(200);
     stroke(200);
-
-    if (health > -1)
-        move();
 
     push();
     translate(-x, -y);
@@ -92,19 +94,39 @@ function draw() {
             fill(clients[i].r, clients[i].g, clients[i].b);
             ellipse(clients[i].x + width / 2, clients[i].y + height / 2, clients[i].d, clients[i].d);
             imageMode(CENTER);
-            image(blueSkin, clients[i].x + width / 2, clients[i].y + height / 2);
+            if (clients[i].skin == 0)
+                image(blueSkin, clients[i].x + width / 2, clients[i].y + height / 2);
+            if (clients[i].skin == 1)
+                image(redSkin, clients[i].x + width / 2, clients[i].y + height / 2);
+            if (clients[i].skin == 2)
+                image(yellowSkin, clients[i].x + width / 2, clients[i].y + height / 2);
+
             fill(255, 0, 0);
             ellipse(clients[i].cannonX + clients[i].x + width / 2, clients[i].cannonY + clients[i].y + height / 2, 5, 5);
         }
     }
     stroke(0, 0, 255);
-    
+
     handleBullets(); // Update, draw, and check collisions of bullets
     pop();
+
     strokeWeight(1);
     noStroke();
     fill(255);
     text("Number Of Players: " + clients.length, 10, 20);
+
+    if (!started) {
+        fill(50, 50, 150, 100);
+        rect(width / 2 - 100, height / 2 - 100, 400, 300);
+        noStroke();
+        fill(255);
+        text("Click to select your skin.", width / 2, height / 2 - 50);
+        image(blueSkin, width / 2 - 75, height / 2);
+        image(redSkin, width / 2, height / 2);
+        image(yellowSkin, width / 2 + 75, height / 2);
+        return;
+    }
+
     text("Health: " + health, 10, 40);
 
     strokeWeight(2.5);
@@ -123,19 +145,26 @@ function draw() {
     fill(pColor);
 
     if (health > 0) {
+        if (health > -1)
+            move();
         ellipse(width / 2, height / 2, diameter, diameter);
         imageMode(CENTER);
-        image(blueSkin, width / 2, height / 2);
+        if (skin == 0)
+            image(blueSkin, width / 2, height / 2);
+        if (skin == 1)
+            image(redSkin, width / 2, height / 2);
+        if (skin == 2)
+            image(yellowSkin, width / 2, height / 2);
 
         calculateCannon();
         strokeWeight(1);
         fill(255, 0, 0);
         stroke(200, 200, 200);
         ellipse(cannonX + width / 2, cannonY + height / 2, 5, 5);
-    }else{
+    } else {
         noStroke();
         fill(255);
-        text("You Died\nPress ' r ' to start again.", width/2 - 100, height/2);
+        text("You Died\nPress ' r ' to start again.", width / 2 - 100, height / 2);
         diameter = 0;
     }
 }
@@ -315,7 +344,7 @@ function keyPressed() {
         speedLimit = 10;
         diameter = 23;
     }
-    if(health <= 0 && key == 'r'){
+    if (health <= 0 && key == 'r') {
         restartPlayer();
     }
 }
@@ -358,6 +387,7 @@ function updateOthers(data) {
 }
 
 function updateCannon(data) {
+    if (!started) return;
     var i = clients.map(function (e) { return e.id; }).indexOf(data.id);
     if (!clients[i]) return;
     clients[i].cannonX = data.cX;
@@ -366,6 +396,29 @@ function updateCannon(data) {
 
 // // Old mouse Clicked to send
 function mouseClicked() {
+    if (!started) {
+        width / 2 - 75, height / 2
+        if (mouseX > width / 2 - 100 && mouseX < width / 2 - 50) skin = 0;
+        if (mouseX > width / 2 - 25 && mouseX < width / 2 + 25) skin = 1;
+        if (mouseX > width / 2 + 50 && mouseX < width / 2 + 100) skin = 2;
+
+        if (skin >= 0) {
+            started = true;
+            var data = {
+                xPos: x,
+                yPos: y,
+                r: red(pColor),
+                g: green(pColor),
+                b: blue(pColor),
+                d: diameter,
+                skinSelection: skin,
+                id: socket.id,
+                h: health
+            }
+            socket.emit('playerBegin', data);
+        }
+        return;
+    }
     if (bulletTimer <= 0 && health > 0) {
         bulletTimer = 5;
         vec = createVectorDirection(mouseX, mouseY, width / 2, height / 2);
