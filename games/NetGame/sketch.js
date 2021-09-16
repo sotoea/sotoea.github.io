@@ -113,7 +113,7 @@ function draw() {
     strokeWeight(1);
     noStroke();
     fill(255);
-    textAlign(CORNER);
+    textAlign(LEFT);
     text("Number Of Players: " + clients.length, 10, 20);
 
     if (!started) {
@@ -128,7 +128,7 @@ function draw() {
         image(yellowSkin, width / 2 + 60, height / 2);
         return;
     }
-    textAlign(CORNER);
+    textAlign(LEFT);
     text("Health: " + health, 10, 40);
 
     strokeWeight(2.5);
