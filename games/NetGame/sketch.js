@@ -117,9 +117,10 @@ function draw() {
 
     if (!started) {
         fill(50, 50, 150, 100);
-        rect(width / 2 - 100, height / 2 - 100, 400, 300);
+        rect(width / 2 - 100, height / 2 - 100, 300, 200);
         noStroke();
         fill(255);
+        textAlign(CENTER);
         text("Click to select your skin.", width / 2, height / 2 - 50);
         image(blueSkin, width / 2 - 75, height / 2);
         image(redSkin, width / 2, height / 2);
