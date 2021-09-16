@@ -117,7 +117,7 @@ function draw() {
 
     if (!started) {
         fill(50, 50, 150, 100);
-        rect(width / 2 - 100, height / 2 - 100, 300, 200);
+        rect(width / 2 - 125, height / 2 - 100, 225, 150);
         noStroke();
         fill(255);
         textAlign(CENTER);
