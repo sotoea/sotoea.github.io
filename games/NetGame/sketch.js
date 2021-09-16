@@ -113,21 +113,22 @@ function draw() {
     strokeWeight(1);
     noStroke();
     fill(255);
+    textAlign(CORNER);
     text("Number Of Players: " + clients.length, 10, 20);
 
     if (!started) {
         fill(50, 50, 150, 100);
-        rect(width / 2 - 125, height / 2 - 100, 225, 150);
+        rect(width / 2 - 125, height / 2 - 100, 250, 150, 5);
         noStroke();
         fill(255);
         textAlign(CENTER);
         text("Click to select your skin.", width / 2, height / 2 - 50);
-        image(blueSkin, width / 2 - 75, height / 2);
-        image(redSkin, width / 2, height / 2);
-        image(yellowSkin, width / 2 + 75, height / 2);
+        image(blueSkin, width / 2 - 90, height / 2);
+        image(redSkin, width / 2 - 15, height / 2);
+        image(yellowSkin, width / 2 + 60, height / 2);
         return;
     }
-
+    textAlign(CORNER);
     text("Health: " + health, 10, 40);
 
     strokeWeight(2.5);
