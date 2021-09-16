@@ -143,10 +143,10 @@ function draw() {
     }
     // Draw Player
     fill(pColor);
-
+    if (health > -20)
+        move();
     if (health > 0) {
-        if (health > -1)
-            move();
+
         ellipse(width / 2, height / 2, diameter, diameter);
         imageMode(CENTER);
         if (skin == 0)
