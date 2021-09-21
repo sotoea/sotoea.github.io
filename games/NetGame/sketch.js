@@ -16,7 +16,7 @@ var blueSkin, redSkin, yellowSkin;
 var started = false;
 
 function preload() {
-    ground = loadImage("img/background.png");
+    ground = loadImage("img/Ground/ground_05.png");
     blueSkin = loadImage("img/blue.png");
     redSkin = loadImage("img/red.png");
     yellowSkin = loadImage("img/yellow.png");
@@ -34,8 +34,8 @@ function setup() {
     socket.on('newProjectile', newProjectile);
 
     frameRate(60);
-    x = random(100, width - 100);
-    y = random(100, height - 100);
+    x = -width/2 + random(200, 1400);
+    y = -height/2 + random(200, 1400);
     upKey = false;
     downKey = false;
     leftKey = false;
@@ -49,8 +49,8 @@ function setup() {
 }
 
 function restartPlayer() {
-    x = random(50, 800);
-    y = random(50, 600);
+    x = -width/2 + random(200, 1400);
+    y = -height/2 + random(200, 1400);
     upKey = false;
     downKey = false;
     leftKey = false;
@@ -75,17 +75,18 @@ function draw() {
     push();
     translate(-x, -y);
 
-    for (var i = 0; i < 15; i++) {
-        for (var j = 0; j < 15; j++) {
-            image(ground, (i * 200), j * 200);
+    imageMode(CORNER);
+    for (var i = 0; i < 25; i++) {
+        for (var j = 0; j < 25; j++) {
+            image(ground, (i * 64), j * 64);
         }
     }
     stroke(100, 50, 50);
     fill(100, 50, 50);
-    rect(-20, -20, 3020, 40, 5);
-    rect(-20, 2980, 3020, 40, 5);
-    rect(2980, -20, 40, 3040, 5);
-    rect(-20, -20, 40, 3020, 5);
+    rect(-20, -20, 1620, 40, 5);
+    rect(-20, 1580, 1620, 40, 5);
+    rect(1580, -20, 40, 1640, 5);
+    rect(-20, -20, 40, 1620, 5);
     var c = clients.map(function (e) { return e.id; }).indexOf(socket.id);
     stroke(50);
     // Draw Clients
@@ -181,7 +182,7 @@ function handleBullets() {
             fill(255, 0, 0);
             ellipse(projectiles[i].x + width / 2, projectiles[i].y + height / 2, 6, 6);
 
-            if (projectiles[i].x < -width / 2 || projectiles[i].x > 3000 - width / 2 || projectiles[i].y < -height / 2 || projectiles[i].y > 3000 - height / 2) {
+            if (projectiles[i].x < -width / 2 || projectiles[i].x > 1600 - width / 2 || projectiles[i].y < -height / 2 || projectiles[i].y > 1600 - height / 2) {
                 projectiles.splice(i, 1);
                 break;
             }
@@ -249,7 +250,7 @@ function move() {
             }
         }
     }
-    if (downKey && y < 2980 - diameter / 2 - height / 2) {
+    if (downKey && y < 1580 - diameter / 2 - height / 2) {
         if (leftKey || rightKey) {
             if (speedY <= speedLimit - 0.70711) {
                 speedY += 0.25;
@@ -281,7 +282,7 @@ function move() {
             }
         }
     }
-    if (rightKey && x < 2980 - diameter / 2 - width / 2) {
+    if (rightKey && x < 1580 - diameter / 2 - width / 2) {
         if (upKey || downKey) {
             if (speedX <= speedLimit - 0.70711) {
                 speedX += 0.25;
@@ -308,8 +309,8 @@ function move() {
         else speedY = 0;
     }
 
-    if (x <= 20 + diameter / 2 - width / 2 || x >= 2980 - diameter / 2 - width / 2) speedX = -speedX;
-    if (y <= 20 + diameter / 2 - height / 2 || y >= 2980 - diameter / 2 - height / 2) speedY = -speedY;
+    if (x <= 20 + diameter / 2 - width / 2 || x >= 1580 - diameter / 2 - width / 2) speedX = -speedX;
+    if (y <= 20 + diameter / 2 - height / 2 || y >= 1580 - diameter / 2 - height / 2) speedY = -speedY;
 
     x += speedX;
     y += speedY;
