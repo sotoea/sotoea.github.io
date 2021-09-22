@@ -13,12 +13,15 @@ var cannonX, cannonY;
 var ground, wall, wallTop;
 
 var blueSkin, redSkin, yellowSkin;
+var gun;
 var started = false;
+var angle;
 
 function preload() {
     ground = loadImage("img/Ground/ground_05.png");
     wall = loadImage("img/Blocks/block_06.png");
     wallTop = loadImage("img/Blocks/block_02.png");
+    gun = loadImage("img/gun.png");
     blueSkin = loadImage("img/blue.png");
     redSkin = loadImage("img/red.png");
     yellowSkin = loadImage("img/yellow.png");
@@ -36,6 +39,7 @@ function setup() {
     socket.on('newProjectile', newProjectile);
 
     frameRate(60);
+    angle = 0;
     x = -width / 2 + random(200, 1400);
     y = -height / 2 + random(200, 1400);
     upKey = false;
@@ -159,7 +163,14 @@ function draw() {
         strokeWeight(1);
         fill(255, 0, 0);
         stroke(200, 200, 200);
-        ellipse(cannonX + width / 2, cannonY + height / 2, 5, 5);
+        push();
+        translate(cannonX + width / 2, cannonY + height / 2 - 10);
+        console.log(angle);
+        rotate(-angle * 2*PI);
+        imageMode(CORNER);
+        image(gun, 0, 0);
+        pop();
+        //ellipse(cannonX + width / 2, cannonY + height / 2, 5, 5);
     } else {
         noStroke();
         fill(255);
@@ -246,7 +257,7 @@ function calculateCannon() {
         tmpY *= -1;
         toggleUp = true;
     }
-    let angle = atan(tmpX / tmpY);
+    angle = atan(tmpX / tmpY);
     cannonX = diameter / 2 * sin(angle);
     cannonY = diameter / 2 * cos(angle);
     if (toggleUp) {
@@ -258,7 +269,9 @@ function calculateCannon() {
         cX: cannonX,
         cY: cannonY
     }
+    
     socket.emit('syncCannon', data);
+    return angle;
 }
 
 function move() {
