@@ -10,13 +10,15 @@ var health = 100;
 // Cannon
 var cannonX, cannonY;
 
-var ground;
+var ground, wall, wallTop;
 
 var blueSkin, redSkin, yellowSkin;
 var started = false;
 
 function preload() {
     ground = loadImage("img/Ground/ground_05.png");
+    wall = loadImage("img/Blocks/block_06.png");
+    wallTop = loadImage("img/Blocks/block_02.png");
     blueSkin = loadImage("img/blue.png");
     redSkin = loadImage("img/red.png");
     yellowSkin = loadImage("img/yellow.png");
@@ -34,8 +36,8 @@ function setup() {
     socket.on('newProjectile', newProjectile);
 
     frameRate(60);
-    x = -width/2 + random(200, 1400);
-    y = -height/2 + random(200, 1400);
+    x = -width / 2 + random(200, 1400);
+    y = -height / 2 + random(200, 1400);
     upKey = false;
     downKey = false;
     leftKey = false;
@@ -49,8 +51,8 @@ function setup() {
 }
 
 function restartPlayer() {
-    x = -width/2 + random(200, 1400);
-    y = -height/2 + random(200, 1400);
+    x = -width / 2 + random(200, 1400);
+    y = -height / 2 + random(200, 1400);
     upKey = false;
     downKey = false;
     leftKey = false;
@@ -83,10 +85,7 @@ function draw() {
     }
     stroke(100, 50, 50);
     fill(100, 50, 50);
-    rect(-20, -20, 1620, 40, 5);
-    rect(-20, 1580, 1620, 40, 5);
-    rect(1580, -20, 40, 1640, 5);
-    rect(-20, -20, 40, 1620, 5);
+
     var c = clients.map(function (e) { return e.id; }).indexOf(socket.id);
     stroke(50);
     // Draw Clients
@@ -111,11 +110,7 @@ function draw() {
     handleBullets(); // Update, draw, and check collisions of bullets
     pop();
 
-    strokeWeight(1);
-    noStroke();
-    fill(255);
-    textAlign(LEFT);
-    text("Number Of Players: " + clients.length, 10, 20);
+
 
     if (!started) {
         fill(50, 50, 150, 100);
@@ -129,8 +124,7 @@ function draw() {
         image(yellowSkin, width / 2 + 60, height / 2);
         return;
     }
-    textAlign(LEFT);
-    text("Health: " + health, 10, 40);
+
 
     strokeWeight(2.5);
     if (speedTimer > 0) {
@@ -144,6 +138,8 @@ function draw() {
     } else {
         stroke(0, 255, 0, 150);
     }
+    let prevX = x;
+    let prevY = y;
     // Draw Player
     fill(pColor);
     if (health > -20)
@@ -170,6 +166,38 @@ function draw() {
         text("You Died\nPress ' r ' to start again.", width / 2 - 100, height / 2);
         diameter = 0;
     }
+
+    push();
+    translate(-prevX, -prevY);
+    imageMode(CORNER);
+    for (var j = 0; j < 25; j++) {
+        // Top Wall
+        image(wall, j * 64, -44);
+        image(wallTop, j * 64, -44 - 32);
+    }
+    for (var j = 0; j < 25; j++) {
+        // Left Wall
+        image(wall, -44, j * 64);
+        image(wallTop, -44, j * 64 - 32);
+    }
+    for (var j = 0; j < 25; j++) {
+        // Right Wall
+        image(wall, 1580, j * 64);
+        image(wallTop, 1580, j * 64 - 32);
+    }
+    for (var j = 0; j < 25; j++) {
+        // Bottom Wall
+        image(wall, j * 64, 1580);
+        image(wallTop, j * 64, 1580 - 32);
+    }
+    pop();
+
+    strokeWeight(1);
+    noStroke();
+    fill(255);
+    textAlign(LEFT);
+    text("Number Of Players: " + clients.length, 10, 20);
+    text("Health: " + health, 10, 40);
 }
 
 function handleBullets() {
@@ -182,7 +210,7 @@ function handleBullets() {
             fill(255, 0, 0);
             ellipse(projectiles[i].x + width / 2, projectiles[i].y + height / 2, 6, 6);
 
-            if (projectiles[i].x < -width / 2 || projectiles[i].x > 1600 - width / 2 || projectiles[i].y < -height / 2 || projectiles[i].y > 1600 - height / 2) {
+            if (projectiles[i].x < -width / 2 + 20 || projectiles[i].x > 1580 - width / 2 || projectiles[i].y < -height / 2 + 20 || projectiles[i].y > 1580 - height / 2) {
                 projectiles.splice(i, 1);
                 break;
             }
