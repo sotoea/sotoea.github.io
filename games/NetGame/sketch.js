@@ -163,14 +163,14 @@ function draw() {
         strokeWeight(1);
         fill(255, 0, 0);
         stroke(200, 200, 200);
-        push();
-        translate(cannonX + width / 2, cannonY + height / 2 - 10);
-        console.log(angle);
-        rotate(-angle * 2*PI);
-        imageMode(CORNER);
-        image(gun, 0, 0);
-        pop();
-        //ellipse(cannonX + width / 2, cannonY + height / 2, 5, 5);
+        // push();
+        // translate(cannonX + width / 2, cannonY + height / 2 - 10);
+       
+        // rotate(-angle * 2*PI);
+        // imageMode(CORNER);
+        // image(gun, 0, 0);
+        // pop();
+        ellipse(cannonX + width / 2, cannonY + height / 2, 8, 8);
     } else {
         noStroke();
         fill(255);
