@@ -1,0 +1,5 @@
+title: Sotocodes
+url: https://sotocodes.com
+permalink: /blog/:title/
+plugins:
+  - jekyll-feed

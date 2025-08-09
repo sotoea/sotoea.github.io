@@ -1,0 +1,17 @@
+---
+layout: default
+title: Blog
+---
+
+<h1>Blog</h1>
+<ul>
+  {% for post in site.posts %}
+  <li>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <small>— {{ post.date | date: "%b %d, %Y" }}</small>
+    {% if post.description %}
+    <div>{{ post.description }}</div>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>

@@ -1,118 +1,112 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
-<head>
-
+  <head>
     <!--00595BC9-03A4-44EF-A9B1-399D8D6896E9-->
 
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- SEO Meta Tags -->
 
-    <meta name="description" content="Portfolio site for Eduardo Soto. Sotocodes; Software Engineer, Game Developer, Web Developer, Virtual and Augmented Reality">
+    <meta
+      name="description"
+      content="Portfolio site for Eduardo Soto. Sotocodes; Software Engineer, Game Developer, Web Developer, Virtual and Augmented Reality"
+    />
 
-    <meta name="author" content="Sotocodes">
-
-
+    <meta name="author" content="Sotocodes" />
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
 
-	<meta property="og:site_name" content="" /> <!-- website name -->
+    <meta property="og:site_name" content="" />
+    <!-- website name -->
 
-	<meta property="og:site" content="" /> <!-- website link -->
+    <meta property="og:site" content="" />
+    <!-- website link -->
 
-	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+    <meta property="og:title" content="" />
+    <!-- title shown in the actual shared post -->
 
-	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+    <meta property="og:description" content="" />
+    <!-- description shown in the actual shared post -->
 
-	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+    <meta property="og:image" content="" />
+    <!-- image link, make sure it's jpg -->
 
-	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+    <meta property="og:url" content="" />
+    <!-- where do you want your post to link to -->
 
-	<meta property="og:type" content="article" />
-
-
+    <meta property="og:type" content="article" />
 
     <!-- Website Title -->
 
     <title>Sotocodes</title>
 
-    
+    <link rel="alternate" type="application/atom+xml" title="Sotocodes Feed"
+    href="{{ "/feed.xml" | relative_url }}">
 
     <!-- Styles -->
 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700"
+      rel="stylesheet"
+    />
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i"
+      rel="stylesheet"
+    />
 
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet" />
 
-    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet" />
 
-    <link href="css/swiper.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet" />
 
-	<link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet" />
 
-	<link href="css/styles.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" />
 
-	
+    <!-- Favicon  -->
 
-	<!-- Favicon  -->
+    <link rel="icon" href="images/favicon.png" />
+  </head>
 
-    <link rel="icon" href="images/favicon.png">
-
-</head>
-
-<body data-spy="scroll" data-target=".fixed-top">
-
-    
-
+  <body data-spy="scroll" data-target=".fixed-top">
     <!-- Preloader -->
 
-	<div class="spinner-wrapper">
+    <div class="spinner-wrapper">
+      <div class="spinner">
+        <div class="bounce1"></div>
 
-        <div class="spinner">
+        <div class="bounce2"></div>
 
-            <div class="bounce1"></div>
-
-            <div class="bounce2"></div>
-
-            <div class="bounce3"></div>
-
-        </div>
-
+        <div class="bounce3"></div>
+      </div>
     </div>
 
     <!-- end of preloader -->
 
-    
-
-
-
     <!-- Navigation -->
 
     <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+      <!-- Text Logo - Use this if you don't have a graphic logo -->
 
-        <!-- Text Logo - Use this if you don't have a graphic logo -->
+      <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Leno</a> -->
 
-        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Leno</a> -->
+      <!-- Image Logo -->
 
+      <a class="navbar-brand logo-image" href="index.html"
+        ><img src="images/logo.svg" alt="alternative"
+      /></a>
 
+      <!-- Mobile Menu Toggle Button -->
 
-        <!-- Image Logo -->
-
-        <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> 
-
-        
-
-        <!-- Mobile Menu Toggle Button -->
-
-        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
 
             <span class="navbar-toggler-awesome fas fa-bars"></span>
 
@@ -120,58 +114,36 @@
 
         </button> -->
 
-        <!-- end of mobile menu toggle button -->
+      <!-- end of mobile menu toggle button -->
 
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <span class="nav-item social-icons">
+          <span class="fa-stack">
+            <a href="https://www.linkedin.com/in/sotoea">
+              <i class="fas fa-circle fa-stack-2x"></i>
 
+              <i class="fab fa-linkedin-in fa-stack-1x"></i>
+            </a>
+          </span>
 
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <span class="fa-stack">
+            <a href="https://www.instagram.com/sotocodes/">
+              <i class="fas fa-circle fa-stack-2x"></i>
 
+              <i class="fab fa-instagram fa-stack-1x"></i>
+            </a>
+          </span>
 
+          <span class="fa-stack">
+            <a href="https://github.com/sotoea">
+              <i class="fas fa-circle fa-stack-2x"></i>
 
-            <span class="nav-item social-icons">
-
-                <span class="fa-stack">
-
-                    <a href="https://www.linkedin.com/in/sotoea">
-
-                        <i class="fas fa-circle fa-stack-2x"></i>
-
-                        <i class="fab fa-linkedin-in fa-stack-1x"></i>
-
-                    </a>
-
-                </span>
-
-                <span class="fa-stack">
-
-                    <a href="https://www.instagram.com/sotocodes/">
-
-                        <i class="fas fa-circle fa-stack-2x"></i>
-
-                        <i class="fab fa-instagram fa-stack-1x"></i>
-
-                    </a>
-
-                </span>
-
-                <span class="fa-stack">
-
-                    <a href="https://github.com/sotoea">
-
-                        <i class="fas fa-circle fa-stack-2x"></i>
-
-                        <i class="fab fa-github fa-stack-1x"></i>
-
-                    </a>
-
-                </span>
-
-
-
-            </span>
-
-        </div>
-        <!-- <button id="show-resume" style="display:block" type="button" 
+              <i class="fab fa-github fa-stack-1x"></i>
+            </a>
+          </span>
+        </span>
+      </div>
+      <!-- <button id="show-resume" style="display:block" type="button" 
         onclick="
             document.getElementById('hide-resume').style.display = 'block';
             document.getElementById('resume').style.display = 'block';
@@ -184,399 +156,401 @@
             document.getElementById('resume').style.display = 'none';
             document.getElementById('show-resume').style.display = 'block';
         ">Hide Resume</button> -->
-
-    </nav> <!-- end of navbar -->
+    </nav>
+    <!-- end of navbar -->
 
     <!-- end of navigation -->
-
-
-
-
 
     <!-- Header -->
 
     <header id="header" class="header">
-
-        <div class="header-content">
-
-            <div class="container">
-
-                <div class="row">
-
-                    <div class="col-lg-6">
-
-                        <div class="text-container">
-
-                            <h2>Eduardo Soto <br><span id="js-rotating">Software Engineer, Web Developer, Game Designer, Virtual Reality, Augmented Reality</span></h2>
-                            <!-- <button class="button1 button11" onclick="location.href='https://sotocodes.com/blog/'" type="button">
+      <div class="header-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="text-container">
+                <h2>
+                  Eduardo Soto <br /><span id="js-rotating"
+                    >Software Engineer, Web Developer, Game Designer, Virtual
+                    Reality, Augmented Reality</span
+                  >
+                </h2>
+                <!-- <button class="button1 button11" onclick="location.href='https://sotocodes.com/blog/'" type="button">
          Check out my Blog</button> -->
+              </div>
+            </div>
+            <!-- end of col -->
 
-                        </div>
-
-                    </div> <!-- end of col -->
-
-                    <div class="col-lg-6">
-
-                        <div class="image-container">
-
-                            <img class="img-fluid" src="images/tp.png" alt="Logo">
-
-                        </div> <!-- end of image-container -->
-
-                    </div> <!-- end of col -->
-
-                </div> <!-- end of row -->
-
-            </div> <!-- end of container -->
-
-        </div> <!-- end of header-content -->
-
-    </header> <!-- end of header -->
-
+            <div class="col-lg-6">
+              <div class="image-container">
+                <img class="img-fluid" src="images/tp.png" alt="Logo" />
+              </div>
+              <!-- end of image-container -->
+            </div>
+            <!-- end of col -->
+          </div>
+          <!-- end of row -->
+        </div>
+        <!-- end of container -->
+      </div>
+      <!-- end of header-content -->
+    </header>
     <!-- end of header -->
 
-    
-    
+    <!-- end of header -->
 
     <!-- Testimonials -->
 
     <div id="about" class="slider-1">
-
-        <div class="container">
-
-            <div class="row">
-
-                <div class="col-lg-12">
-
-
-
-                    <!-- Card Slider -->
-
-                    <div class="slider-container">
-
-                        <div class="swiper-container card-slider">
-
-                            <div class="swiper-wrapper">
-
-                                
-
-                                <!-- Slide -->
-
-                                <div class="swiper-slide">
-
-                                    <div class="card">
-
-                                        <img class="card-image" src="images/unity.jpg" alt="alternative">
-
-                                        <div class="card-body">
-
-                                            <p class="testimonial-author">Unity 3D</p>
-
-                                            <p class="testimonial-text">8+ years experience of development with Unity 3D creating games, simulations, mobile applications, and VR/AR experiences</p>
-
-                                            
-
-                                        </div>
-
-                                    </div>
-
-                                </div> <!-- end of swiper-slide -->
-
-                                <!-- end of slide -->
-
-        
-
-                                <!-- Slide -->
-
-                                <div class="swiper-slide">
-
-                                    <div class="card">
-
-                                        <img class="card-image" src="images/drupal.png" alt="alternative">
-
-                                        <div class="card-body">
-
-                                            <p class="testimonial-author">Drupal</p>
-
-                                            <p class="testimonial-text">2+ years of experience of development with Drupal 8 designing and implementing complex websites</p>
-
-                                            
-
-                                        </div>
-
-                                    </div>        
-
-                                </div> <!-- end of swiper-slide -->
-
-                                <!-- end of slide -->
-
-        
-
-                                <!-- Slide -->
-
-                                <div class="swiper-slide">
-
-                                    <div class="card">
-
-                                        <img class="card-image" src="images/vr.png" alt="alternative">
-
-                                        <div class="card-body">
-
-                                            <p class="testimonial-author">Virtual Reality</p>
-
-                                            <p class="testimonial-text">5+ years developing experiences and research in VR with Oculus Rift, HTC Vive, and mobile VR</p>
-
-                                            
-
-                                        </div>
-
-                                    </div>        
-
-                                </div> <!-- end of swiper-slide -->
-
-                                <!-- end of slide -->
-
-        
-
-                                <!-- Slide -->
-
-                                <div class="swiper-slide">
-
-                                    <div class="card">
-
-                                        <img class="card-image" src="images/vuforia.png" alt="alternative">
-
-                                        <div class="card-body">
-
-                                            <p class="testimonial-author">Augmented Reality</p>
-
-                                            <p class="testimonial-text">4+ years experience developing Augmented Reality experiences with Vuforia Framework and Unity</p>
-
-                                            
-
-                                        </div>
-
-                                    </div>
-
-                                </div> <!-- end of swiper-slide -->
-
-                                <!-- end of slide -->
-
-        
-
-                                <!-- Slide -->
-
-                                <div class="swiper-slide">
-
-                                    <div class="card">
-
-                                        <img class="card-image" src="images/programming.png" alt="alternative">
-
-                                        <div class="card-body">
-
-                                            <p class="testimonial-author">Coding</p>
-
-                                            <p class="testimonial-text">Varied experience as a programmer<br>(Python, Java, C#, C, C++, Javascript...)</p>
-
-                                            
-
-                                        </div>
-
-                                    </div>        
-
-                                </div> <!-- end of swiper-slide -->
-
-                                <!-- end of slide -->
-
-        
-
-                                <!-- Slide -->
-
-                                <div class="swiper-slide">
-
-                                    <div class="card">
-
-                                        <img class="card-image" src="images/digitalart.png" alt="alternative">
-
-                                        <div class="card-body">
-
-                                            <p class="testimonial-author">Digital Artist</p>
-
-                                            <p class="testimonial-text">2+ years as a digital artist creating 2D and 3D artwork, logos, designs... With tools such as Photoshop, Illustrator, Blender, and Maya</p>
-
-                                            
-
-                                        </div>
-
-                                    </div>        
-
-                                </div> <!-- end of swiper-slide -->
-
-                                <!-- end of slide -->
-
-                            
-
-                            </div> <!-- end of swiper-wrapper -->
-
-        
-
-                            <!-- Add Arrows -->
-
-                            <div class="swiper-button-next"></div>
-
-                            <div class="swiper-button-prev"></div>
-
-                            <!-- end of add arrows -->
-
-        
-
-                        </div> <!-- end of swiper-container -->
-
-                    </div> <!-- end of slider-container -->
-
-                    <!-- end of card slider -->
-
-
-
-                </div> <!-- end of col -->
-
-            </div> <!-- end of row -->
-
-        </div> <!-- end of container -->
-
-    </div> <!-- end of slider-1 -->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- Card Slider -->
+
+            <div class="slider-container">
+              <div class="swiper-container card-slider">
+                <div class="swiper-wrapper">
+                  <!-- Slide -->
+
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <img
+                        class="card-image"
+                        src="images/unity.jpg"
+                        alt="alternative"
+                      />
+
+                      <div class="card-body">
+                        <p class="testimonial-author">Unity 3D</p>
+
+                        <p class="testimonial-text">
+                          8+ years experience of development with Unity 3D
+                          creating games, simulations, mobile applications, and
+                          VR/AR experiences
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of swiper-slide -->
+
+                  <!-- end of slide -->
+
+                  <!-- Slide -->
+
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <img
+                        class="card-image"
+                        src="images/drupal.png"
+                        alt="alternative"
+                      />
+
+                      <div class="card-body">
+                        <p class="testimonial-author">Drupal</p>
+
+                        <p class="testimonial-text">
+                          2+ years of experience of development with Drupal 8
+                          designing and implementing complex websites
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of swiper-slide -->
+
+                  <!-- end of slide -->
+
+                  <!-- Slide -->
+
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <img
+                        class="card-image"
+                        src="images/vr.png"
+                        alt="alternative"
+                      />
+
+                      <div class="card-body">
+                        <p class="testimonial-author">Virtual Reality</p>
+
+                        <p class="testimonial-text">
+                          5+ years developing experiences and research in VR
+                          with Oculus Rift, HTC Vive, and mobile VR
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of swiper-slide -->
+
+                  <!-- end of slide -->
+
+                  <!-- Slide -->
+
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <img
+                        class="card-image"
+                        src="images/vuforia.png"
+                        alt="alternative"
+                      />
+
+                      <div class="card-body">
+                        <p class="testimonial-author">Augmented Reality</p>
+
+                        <p class="testimonial-text">
+                          4+ years experience developing Augmented Reality
+                          experiences with Vuforia Framework and Unity
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of swiper-slide -->
+
+                  <!-- end of slide -->
+
+                  <!-- Slide -->
+
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <img
+                        class="card-image"
+                        src="images/programming.png"
+                        alt="alternative"
+                      />
+
+                      <div class="card-body">
+                        <p class="testimonial-author">Coding</p>
+
+                        <p class="testimonial-text">
+                          Varied experience as a programmer<br />(Python, Java,
+                          C#, C, C++, Javascript...)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of swiper-slide -->
+
+                  <!-- end of slide -->
+
+                  <!-- Slide -->
+
+                  <div class="swiper-slide">
+                    <div class="card">
+                      <img
+                        class="card-image"
+                        src="images/digitalart.png"
+                        alt="alternative"
+                      />
+
+                      <div class="card-body">
+                        <p class="testimonial-author">Digital Artist</p>
+
+                        <p class="testimonial-text">
+                          2+ years as a digital artist creating 2D and 3D
+                          artwork, logos, designs... With tools such as
+                          Photoshop, Illustrator, Blender, and Maya
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of swiper-slide -->
+
+                  <!-- end of slide -->
+                </div>
+                <!-- end of swiper-wrapper -->
+
+                <!-- Add Arrows -->
+
+                <div class="swiper-button-next"></div>
+
+                <div class="swiper-button-prev"></div>
+
+                <!-- end of add arrows -->
+              </div>
+              <!-- end of swiper-container -->
+            </div>
+            <!-- end of slider-container -->
+
+            <!-- end of card slider -->
+          </div>
+          <!-- end of col -->
+        </div>
+        <!-- end of row -->
+      </div>
+      <!-- end of container -->
+    </div>
+    <!-- end of slider-1 -->
 
     <!-- end of testimonials -->
 
     <div id="games" class="basic-1">
-
-        <div class="container">
-            
-            <div class="row">
-
-                <div class="col-lg-12">
-                    <h2>Games/Projects</h2>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>Games/Projects</h2>
+          </div>
         </div>
+      </div>
     </div>
 
     <div id="legendhasit" class="basic-2">
-
-        <div class="container">
-            
-            <div class="row">
-                <div class="col-lg-6">
-                    <img class="img-fluid" src="https://media4.giphy.com/media/AnZKgd6x8QSiOptfHx/giphy.gif?cid=790b7611ac6abe69a2937fe4eca56bc33606de64fbb9f7d5&rid=giphy.gif&ct=g" alt="Legend Has It">
-                </div>
-                <div class="col-lg-6">
-                    <h3>Legend Has It</h3>
-                    <p>The legend of Langard, as told by the village wise man. Live through this hero's story. Made with Unity/C# as part of the Tazmen Jam</p>
-                    <a class="btn-solid-reg" href="https://sotocodes.itch.io/legend-has-it">Play Now</a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <img
+              class="img-fluid"
+              src="https://media4.giphy.com/media/AnZKgd6x8QSiOptfHx/giphy.gif?cid=790b7611ac6abe69a2937fe4eca56bc33606de64fbb9f7d5&rid=giphy.gif&ct=g"
+              alt="Legend Has It"
+            />
+          </div>
+          <div class="col-lg-6">
+            <h3>Legend Has It</h3>
+            <p>
+              The legend of Langard, as told by the village wise man. Live
+              through this hero's story. Made with Unity/C# as part of the
+              Tazmen Jam
+            </p>
+            <a
+              class="btn-solid-reg"
+              href="https://sotocodes.itch.io/legend-has-it"
+              >Play Now</a
+            >
+          </div>
         </div>
+      </div>
     </div>
 
     <div id="cybermayhem" class="basic-2">
-
-        <div class="container">
-            
-            <div class="row">
-                
-                <div class="col-lg-6">
-                    <h3>Cyber Mayhem</h3>
-                    <p>Protect your base in this shoot'em up arcade style game. Destroy enemies and collect powerups. Survive for as long as possible. Made with Unity/C#</p>
-                    <a class="btn-solid-reg" href="https://sotocodes.itch.io/cyber-mayhem">Play Now</a>
-                </div>
-                <div class="col-lg-6">
-                    <img class="img-fluid" src="https://media0.giphy.com/media/aDL5e2Ir6wOOUd5XS0/giphy.gif?cid=790b76116f5d51a0787003f954945a81f803a2dd4b6ed47f&rid=giphy.gif&ct=g" alt="Cyber Mayhem">
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h3>Cyber Mayhem</h3>
+            <p>
+              Protect your base in this shoot'em up arcade style game. Destroy
+              enemies and collect powerups. Survive for as long as possible.
+              Made with Unity/C#
+            </p>
+            <a
+              class="btn-solid-reg"
+              href="https://sotocodes.itch.io/cyber-mayhem"
+              >Play Now</a
+            >
+          </div>
+          <div class="col-lg-6">
+            <img
+              class="img-fluid"
+              src="https://media0.giphy.com/media/aDL5e2Ir6wOOUd5XS0/giphy.gif?cid=790b76116f5d51a0787003f954945a81f803a2dd4b6ed47f&rid=giphy.gif&ct=g"
+              alt="Cyber Mayhem"
+            />
+          </div>
         </div>
+      </div>
     </div>
 
     <div id="spacejumper" class="basic-2">
-
-        <div class="container">
-            
-            <div class="row">
-                <div class="col-lg-6">
-                    <img class="img-fluid" src="https://media4.giphy.com/media/Dtre7rTizaujbL2ydN/giphy.gif?cid=790b7611c07bc863d43fabf638bb74ced30f8b053f1b461b&rid=giphy.gif&ct=g" alt="Space Jumper Title Screen">
-                </div>
-                <div class="col-lg-6">
-                    <h3>Space Jumper</h3>
-                    <p>Play as a space jumping alien destroying machine in this endless procedural platform game. Made with Unity/C#</p>
-                    <a class="btn-solid-reg" href="https://sotocodes.com/games/Space-Jumper/">Play Now</a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <img
+              class="img-fluid"
+              src="https://media4.giphy.com/media/Dtre7rTizaujbL2ydN/giphy.gif?cid=790b7611c07bc863d43fabf638bb74ced30f8b053f1b461b&rid=giphy.gif&ct=g"
+              alt="Space Jumper Title Screen"
+            />
+          </div>
+          <div class="col-lg-6">
+            <h3>Space Jumper</h3>
+            <p>
+              Play as a space jumping alien destroying machine in this endless
+              procedural platform game. Made with Unity/C#
+            </p>
+            <a
+              class="btn-solid-reg"
+              href="https://sotocodes.com/games/Space-Jumper/"
+              >Play Now</a
+            >
+          </div>
         </div>
+      </div>
     </div>
-    
-    <div id="spacepool" class="basic-2">
 
-        <div class="container">
-            
-            <div class="row">
-                
-                <div class="col-lg-6">
-                    <h3>Space Pool</h3>
-                    <p>A short billiards/pool puzzle game where the sink hole is a high gravity object. Made with Unity/C#</p>
-                    <a class="btn-solid-reg" href="https://sotocodes.com/games/Space-Pool/">Play Now</a>
-                </div>
-                <div class="col-lg-6">
-                    <img class="img-fluid" src="https://media4.giphy.com/media/fRM9KmaJo0QRs533VF/giphy.gif?cid=790b7611d0adcd801a86c3a7d29bc3129ba0edc16353b5d5&rid=giphy.gif&ct=g" alt="Space Pool">
-                </div>
-            </div>
+    <div id="spacepool" class="basic-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h3>Space Pool</h3>
+            <p>
+              A short billiards/pool puzzle game where the sink hole is a high
+              gravity object. Made with Unity/C#
+            </p>
+            <a
+              class="btn-solid-reg"
+              href="https://sotocodes.com/games/Space-Pool/"
+              >Play Now</a
+            >
+          </div>
+          <div class="col-lg-6">
+            <img
+              class="img-fluid"
+              src="https://media4.giphy.com/media/fRM9KmaJo0QRs533VF/giphy.gif?cid=790b7611d0adcd801a86c3a7d29bc3129ba0edc16353b5d5&rid=giphy.gif&ct=g"
+              alt="Space Pool"
+            />
+          </div>
         </div>
+      </div>
     </div>
 
     <div id="Multiplayer Shooter" class="basic-2">
-
-        <div class="container">
-            
-            <div class="row">
-
-                <div class="col-lg-6">
-                    <img class="img-fluid" src="https://media2.giphy.com/media/XNvnxwkRQErzKziA6W/giphy.gif?cid=790b76115387b43d947a14319859dd7fc08b6dd4206c26ad&rid=giphy.gif&ct=g" alt="Multiplayer Shooter">
-                </div>
-                <div class="col-lg-6">
-                    <h3>Multiplayer Shooter</h3>
-                    <p>A simple multiplayer game built with socketio, P5JS, with a server hosted on Heroku.</p>
-                    <a class="btn-solid-reg" href="https://sotocodes.com/games/NetGame/">Play Now</a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <img
+              class="img-fluid"
+              src="https://media2.giphy.com/media/XNvnxwkRQErzKziA6W/giphy.gif?cid=790b76115387b43d947a14319859dd7fc08b6dd4206c26ad&rid=giphy.gif&ct=g"
+              alt="Multiplayer Shooter"
+            />
+          </div>
+          <div class="col-lg-6">
+            <h3>Multiplayer Shooter</h3>
+            <p>
+              A simple multiplayer game built with socketio, P5JS, with a server
+              hosted on Heroku.
+            </p>
+            <a class="btn-solid-reg" href="https://sotocodes.com/games/NetGame/"
+              >Play Now</a
+            >
+          </div>
         </div>
+      </div>
     </div>
 
-
-
-
     https://sotocodes.itch.io/cyber-mayhem
-    
-
-    	
 
     <!-- Scripts -->
 
-    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/jquery.min.js"></script>
+    <!-- jQuery for Bootstrap's JavaScript plugins -->
 
-    <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="js/popper.min.js"></script>
+    <!-- Popper tooltip library for Bootstrap -->
 
-    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap framework -->
 
-    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/jquery.easing.min.js"></script>
+    <!-- jQuery Easing for smooth scrolling between anchors -->
 
-    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="js/swiper.min.js"></script>
+    <!-- Swiper for image and text sliders -->
 
-    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <!-- Magnific Popup for lightboxes -->
 
-    <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
+    <script src="js/morphext.min.js"></script>
+    <!-- Morphtext rotating text in the header -->
 
-    <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="js/validator.min.js"></script>
+    <!-- Validator.js - Bootstrap plugin that validates forms -->
 
-    <script src="js/scripts.js"></script> <!-- Custom scripts -->
-
-</body>
-
+    <script src="js/scripts.js"></script>
+    <!-- Custom scripts -->
+  </body>
 </html>
